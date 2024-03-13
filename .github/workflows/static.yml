@@ -36,11 +36,9 @@ jobs:
       - name: 'change version'
         uses: actions/setup-node@v3
         with:
-          node-version: 18.17.1
+          node-version: 14
       - run: |
-          npm -v
-          sudo npm i -g npm@10.4.0
-          npm -v
+          npm -v        
           npm install
           npm run build
       - name: Upload artifact
