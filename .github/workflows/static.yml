@@ -38,8 +38,9 @@ jobs:
         with:
           node-version: 18.17.1
       - run: |
+          npm -v
           npm install
-          npm run build
+          CI = false npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
