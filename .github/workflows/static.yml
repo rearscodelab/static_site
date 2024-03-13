@@ -43,7 +43,7 @@ jobs:
           version: '10.4.0'
       - run: |
           npm -v
-          node-v
+          node -v
           npm install
           npm run build
       - name: Upload artifact
