@@ -36,7 +36,7 @@ jobs:
       - name: 'change version'
         uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 18.13.0
       - run: |
           npm -v        
           npm install
