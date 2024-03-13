@@ -37,17 +37,17 @@ jobs:
       #   uses: actions/setup-node@v3
       #   with:
       #     node-version: 18.13.0
-      - name: 'change version'
-        uses: reedyuk/npm-version@1.1.1
-        with:
-          version: '10.4.0'
-        env:
-          CI: false
-      - run: |
-          npm -v
-          node -v
-          npm install
-          npm run build
+      # - name: 'change version'
+      #   uses: reedyuk/npm-version@1.1.1
+      #   with:
+      #     version: '10.4.0'
+      #   env:
+      #     CI: false
+      # - run: |
+      #     npm -v
+      #     node -v
+      #     npm install
+      #     npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
