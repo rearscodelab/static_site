@@ -42,7 +42,6 @@ jobs:
           sudo npm i -g npm@10.4.0
           npm -v
           npm install
-          CI = false
           npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
