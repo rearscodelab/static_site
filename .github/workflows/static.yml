@@ -34,17 +34,13 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: 'change version'
-        uses: reedyuk/npm-version@1.1.1
-        with:
-          version: '10.4.0'
-      - name: 'change version'
         uses: actions/setup-node@v3
         with:
           node-version: 18.17.1
       - run: |
           npm -v
           majorVersion=$(node -v | cut -d. -f1 | cut -d'v' -f2)
-          npm i -g npm --prefix=/usr/local/opt/node@$majorVersion
+          sudo npm i -g npm --prefix=/usr/local/opt/node@$majorVersion
           npm -v
           npm install
           CI = false
