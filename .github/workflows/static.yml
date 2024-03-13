@@ -39,8 +39,7 @@ jobs:
           node-version: 18.17.1
       - run: |
           npm -v
-          majorVersion=$(node -v | cut -d. -f1 | cut -d'v' -f2)
-          sudo npm i -g npm --prefix=/usr/local/opt/node@$majorVersion
+          sudo npm i -g npm@10.4.0
           npm -v
           npm install
           CI = false
