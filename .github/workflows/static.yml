@@ -58,13 +58,18 @@ jobs:
       # - name: Deploy to GitHub Pages
       #   id: deployment
       #   uses: actions/deploy-pages@v4
-      - name: Deploy 🚀
-        uses: bitovi/github-actions-react-to-github-pages@v1.2.3
+      # - name: Deploy 🚀
+      #   uses: bitovi/github-actions-react-to-github-pages@v1.2.3
+      #   with:
+      #     path: build
+      #     install_command: ls # npm i
+      #     # Specifies the command to run after the install command for the build
+      #     build_command: ls # npm run build
+      #     # Specifies if the action should cache npm dependencies.
+      #     caching: optional
+      - name: React Deploy - Github Pages
+        uses: fcodelabs/react-deploy-github-pages-action@v1.0.0
         with:
-          path: build
-          install_command: ls # npm i
-          # Specifies the command to run after the install command for the build
-          build_command: ls # npm run build
-          # Specifies if the action should cache npm dependencies.
-          caching: optional
+          # Build directory to deploy
+          build_dir: build
                 
